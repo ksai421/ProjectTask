@@ -1,0 +1,64 @@
+
+
+
+
+ <!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <title>ProjectTask</title>
+  
+ </head>
+ <body>
+    <div class="container">
+        <h2>Employee Details</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Firstname</th>
+              <th>MobileNumber</th>
+              <th>Email</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of details">
+              <td>{{employee.id}}</td>
+              <td>{{employee.firstname}}</td>
+              <td>{{employee.mobileNum}}</td>
+              <td>{{employee.email}}</td>
+              <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"
+                (click)="button(employee)">Click</button>
+              </td>
+            </tr>
+      
+          </tbody>
+        </table>
+      
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                  <div class="modal-body">
+                      <p> ID :- <b>{{emplye.id}}</b></p>
+                      <p> First Name :- <b>{{emplye.firstname}}</b></p>
+                      <p> Mobile Number :- <b>{{emplye.mobileNum}}</b></p>
+                      <p> Email :-<b>{{emplye.email}}</b></p>
+                    </div>   
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </body>
+ </html> 
+
+ <!-- <app-home></app-home> -->
